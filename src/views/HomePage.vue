@@ -1,0 +1,76 @@
+<template>
+  <div class="homepage-container">
+    <MovieList
+      @set-selected-movie-id="setSelectedMovieId"
+      :movieList="data"
+      :id="selectedMovieId"
+    />
+    <MoviePreview
+      :image="preview.image"
+      :title="preview.title"
+      :description="preview.desc"
+    />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import axios, { AxiosResponse } from "axios"
+import MovieList from "@/components/MovieList.vue"
+import MoviePreview from "@/components/MoviePreview.vue"
+
+import { BASE_IMAGE_URL, API_URL } from "../constants"
+import { TMovieData, TMoviePreview } from '../types'
+
+export default defineComponent({
+  name: "HomePage",
+
+  components: {
+    MovieList,
+    MoviePreview,
+  },
+
+  data() {
+    return {
+      preview: {} as TMoviePreview,
+      data: [] as TMovieData[],
+      selectedMovieId: 0,
+    }
+  },
+
+  mounted() {
+    axios.get(API_URL).then((response: AxiosResponse) => {
+      this.data = response.data.results
+    })
+  },
+
+  methods: {
+    setSelectedMovieId(id: number) {
+      this.selectedMovieId = id
+    },
+  },
+
+  watch: {
+    data(movieList: TMovieData[]) {
+      movieList.length > 0 && this.setSelectedMovieId(movieList[0].id)
+    },
+
+    selectedMovieId(id: number) {
+      const selectedMovie = this.data.find((movie) => movie.id === id) as TMovieData
+      this.preview = {
+        image: `${BASE_IMAGE_URL}${selectedMovie.poster_path}`,
+        title: selectedMovie.title,
+        overview: selectedMovie.overview,
+      }
+    },
+  },
+})
+</script>
+
+<style lang="scss">
+  .homepage-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: inherit;
+  }
+</style>
