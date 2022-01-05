@@ -22,14 +22,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-$header-height: 83px;
-
 .movie-preview {
-  position: fixed;
-  top: $header-height;
-  right: 0;
+  display: block;
   width: 75%;
-  height: auto;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .movie-preview__image {

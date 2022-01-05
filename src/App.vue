@@ -35,6 +35,8 @@ header {
   left: 0;
 
   nav {
+    display: flex;
+    align-items: center;
     padding: 30px;
     background-color: white;
     border-bottom: 1px solid black;

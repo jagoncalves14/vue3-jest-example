@@ -1,9 +1,9 @@
 <template>
   <div class="homepage-container">
     <MovieList
-      @set-selected-movie-id="setSelectedMovieId"
-      :movieList="data"
-      :id="selectedMovieId"
+      @selected-movie="setActiveMovie"
+      :movie-list="data"
+      :active-movie-id="activeMovieId"
     />
     <MoviePreview
       :image="preview.image"
@@ -34,7 +34,7 @@ export default defineComponent({
     return {
       preview: {} as TMoviePreview,
       data: [] as TMovieData[],
-      selectedMovieId: 0
+      activeMovieId: 0
     }
   },
 
@@ -45,17 +45,17 @@ export default defineComponent({
   },
 
   methods: {
-    setSelectedMovieId(id: number) {
-      this.selectedMovieId = id
+    setActiveMovie(id: number) {
+      this.activeMovieId = id
     }
   },
 
   watch: {
     data(movieList: TMovieData[]) {
-      movieList.length > 0 && this.setSelectedMovieId(movieList[0].id)
+      movieList.length > 0 && this.setActiveMovie(movieList[0].id)
     },
 
-    selectedMovieId(id: number) {
+    activeMovieId(id: number) {
       const selectedMovie = this.data.find(
         (movie) => movie.id === id
       ) as TMovieData
