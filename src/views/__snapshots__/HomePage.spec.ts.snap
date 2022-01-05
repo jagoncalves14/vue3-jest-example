@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage Mount should mount correctly 1`] = `
+<div class="homepage-container">
+  <div class="movie-list">
+    <ul></ul>
+  </div>
+  <div class="movie-preview">
+    <div class="movie-preview__image"><img></div>
+    <h3 class="movie-preview__title"></h3>
+    <div class="movie-preview__description"></div>
+  </div>
+</div>
+`;

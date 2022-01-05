@@ -19,8 +19,8 @@ import axios, { AxiosResponse } from "axios"
 import MovieList from "@/components/MovieList.vue"
 import MoviePreview from "@/components/MoviePreview.vue"
 
-import { BASE_IMAGE_URL, API_URL } from "../constants"
-import { TMovieData, TMoviePreview } from '../types'
+import { BASE_IMAGE_URL, API_URL } from "@/constants"
+import { TMovieData, TMoviePreview } from '@/types'
 
 export default defineComponent({
   name: "HomePage",
