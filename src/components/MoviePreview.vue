@@ -8,37 +8,37 @@
   </div>
 </template>
 
-<script lang='ts'>
-  import { defineComponent } from 'vue'
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-  export default defineComponent({
-    name: "MoviePreview",
-    props: {
-      image: String,
-      title: String,
-      description: String,
-    },
-  })
+export default defineComponent({
+  name: 'MoviePreview',
+  props: {
+    image: String,
+    title: String,
+    description: String
+  }
+})
 </script>
 
 <style lang="scss">
-  $header-height: 83px;
+$header-height: 83px;
 
-  .movie-preview {
-    position: fixed;
-    top: $header-height;
-    right: 0;
-    width: 75%;
-    height: auto;
-  }
+.movie-preview {
+  position: fixed;
+  top: $header-height;
+  right: 0;
+  width: 75%;
+  height: auto;
+}
 
-  .movie-preview__image {
-    padding: 70px 0 0 0;
-  }
+.movie-preview__image {
+  padding: 70px 0 0 0;
+}
 
-  .movie-preview__image img {
-    height: 60vh;
-    border-radius: 3px;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
-  }
+.movie-preview__image img {
+  height: 60vh;
+  border-radius: 3px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
+}
 </style>

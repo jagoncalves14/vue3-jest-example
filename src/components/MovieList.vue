@@ -13,14 +13,14 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
 import { TMovieData } from '../types'
 
 export default defineComponent({
-  name: "MovieList",
+  name: 'MovieList',
 
-  emits: ["set-selected-movie-id"],
+  emits: ['set-selected-movie-id'],
 
   props: {
     movieList: {
@@ -30,50 +30,50 @@ export default defineComponent({
 
     id: {
       type: Number,
-      default: 0,
+      default: 0
     }
   },
 
   methods: {
     onMovieSelected(data: TMovieData) {
-      this.$emit("set-selected-movie-id", data.id)
-    },
-  },
+      this.$emit('set-selected-movie-id', data.id)
+    }
+  }
 })
 </script>
 
 <style lang="scss">
-  .movie-list {
-    width: 25%;
-    margin-right: auto;
-    margin-left: 0;
-    background-color: white;
-    border-right: 1px solid black;
-    color: black;
+.movie-list {
+  width: 25%;
+  margin-right: auto;
+  margin-left: 0;
+  background-color: white;
+  border-right: 1px solid black;
+  color: black;
 
-    ul {
-      margin: 0;
-      padding: 0;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(black, 1);
+    text-align: left;
+    cursor: pointer;
+
+    &:last-of-type {
+      border-bottom: none;
     }
 
-    ul li {
-      padding: 15px 30px;
-      border-bottom: 1px solid rgba(black, 1);
-      text-align: left;
-      cursor: pointer;
+    &:hover {
+      background: rgba(black, 0.05);
+    }
 
-      &:last-of-type {
-        border-bottom: none;
-      }
-
-      &:hover {
-        background: rgba(black, 0.05);
-      }
-
-      &.active {
-        background: rgba(blue, 0.5);
-        color: white;
-      }
+    &.active {
+      background: rgba(blue, 0.5);
+      color: white;
     }
   }
+}
 </style>

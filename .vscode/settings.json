@@ -1,0 +1,51 @@
+{
+  // ===
+  // Spacing
+  // ===
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  // ===
+  // Files
+  // ===
+  "files.exclude": {
+    "**/*.log": true
+  },
+  // ===
+  // Event Triggers
+  // ===
+  "editor.formatOnSave": true,
+  "eslint.run": "onType",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  // ===
+  // HTML
+  // ===
+  "html.format.enable": false,
+  "vetur.validation.template": true,
+  "vetur.validation.interpolation": true,
+  "vetur.experimental.templateInterpolationService": false,
+  // ===
+  // JS && JSON
+  // ===
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
+  "javascript.format.enable": false,
+  "json.format.enable": false,
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.styleInitialIndent": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // ===
+  // CSS
+  // ===
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false
+}

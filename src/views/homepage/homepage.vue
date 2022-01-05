@@ -15,26 +15,26 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import axios, { AxiosResponse } from "axios"
-import MovieList from "@/components/MovieList.vue"
-import MoviePreview from "@/components/MoviePreview.vue"
+import axios, { AxiosResponse } from 'axios'
+import MovieList from '@/components/MovieList.vue'
+import MoviePreview from '@/components/MoviePreview.vue'
 
-import { BASE_IMAGE_URL, API_URL } from "@/constants"
+import { BASE_IMAGE_URL, API_URL } from '@/constants'
 import { TMovieData, TMoviePreview } from '@/types'
 
 export default defineComponent({
-  name: "HomePage",
+  name: 'HomePage',
 
   components: {
     MovieList,
-    MoviePreview,
+    MoviePreview
   },
 
   data() {
     return {
       preview: {} as TMoviePreview,
       data: [] as TMovieData[],
-      selectedMovieId: 0,
+      selectedMovieId: 0
     }
   },
 
@@ -47,7 +47,7 @@ export default defineComponent({
   methods: {
     setSelectedMovieId(id: number) {
       this.selectedMovieId = id
-    },
+    }
   },
 
   watch: {
@@ -56,21 +56,23 @@ export default defineComponent({
     },
 
     selectedMovieId(id: number) {
-      const selectedMovie = this.data.find((movie) => movie.id === id) as TMovieData
+      const selectedMovie = this.data.find(
+        (movie) => movie.id === id
+      ) as TMovieData
       this.preview = {
         image: `${BASE_IMAGE_URL}${selectedMovie.poster_path}`,
         title: selectedMovie.title,
-        overview: selectedMovie.overview,
+        overview: selectedMovie.overview
       }
-    },
-  },
+    }
+  }
 })
 </script>
 
 <style lang="scss">
-  .homepage-container {
-    display: flex;
-    justify-content: space-evenly;
-    height: inherit;
-  }
+.homepage-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: inherit;
+}
 </style>

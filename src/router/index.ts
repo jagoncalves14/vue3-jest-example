@@ -1,16 +1,16 @@
-import { createRouter, createWebHistory } from "vue-router"
-import Home from "../views/homepage/homepage.vue"
-import Contact from "../views/contact/contact.vue"
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/homepage/homepage.vue'
+import Contact from '../views/contact/contact.vue'
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home
   },
   {
-    path: "/contact",
-    name: "Contact",
+    path: '/contact',
+    name: 'Contact',
     component: Contact
   }
 ]
