@@ -2,7 +2,7 @@
 
 exports[`Homepage Mount should mount correctly 1`] = `
 <div class="homepage-container">
-  <div class="movie-list">
+  <div class="movie-list"><input class="movie-list__search" type="text" placeholder="Search for a movie">
     <ul></ul>
   </div>
   <div class="movie-preview">
