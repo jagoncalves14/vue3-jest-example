@@ -16,8 +16,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import axios, { AxiosResponse } from 'axios'
-import MovieList from '@/components/MovieList.vue'
-import MoviePreview from '@/components/MoviePreview.vue'
+import MovieList from '@/components/movie-list/movie-list.vue'
+import MoviePreview from '@/components/movie-preview/movie-preview.vue'
 
 import { BASE_IMAGE_URL, API_URL } from '@/constants'
 import { TMovieData, TMoviePreview } from '@/types'

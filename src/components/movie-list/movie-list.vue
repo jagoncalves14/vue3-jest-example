@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { TMovieData } from '../types'
+import { TMovieData } from '@/types'
 
 export default defineComponent({
   name: 'MovieList',

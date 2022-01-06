@@ -1,5 +1,8 @@
 <template>
   <header>
+    <div class="logo">
+      <img src="@/assets/logo.svg" />
+    </div>
     <nav>
       <router-link to="/">Popular Movies</router-link>
       <div class="separator">|</div>
@@ -30,16 +33,38 @@ body {
 header {
   position: fixed;
   width: 100%;
+  max-width: 100%;
   top: 0;
   height: 83px;
   left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+
+  .logo {
+    display: inline-flex;
+    flex: 0 1 auto;
+    align-items: center;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    img {
+      max-height: 50px;
+    }
+  }
 
   nav {
     display: flex;
     align-items: center;
-    padding: 30px;
+    margin: 0;
+    padding: 0;
     background-color: white;
-    border-bottom: 1px solid black;
     text-align: left;
   }
 
