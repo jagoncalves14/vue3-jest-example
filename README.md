@@ -2,6 +2,8 @@
 
 Basic examples on how to write unit tests for a Vue application using Jest.
 
+Presentation: [Word Doc](https://dhigroupinc-my.sharepoint.com/:w:/p/jeremiah_labresh/ESCk5KAUUY5CpDTKWmnHT5gB5bKks2Vv70DODfLbgXP7SQ)
+
 ## Project setup
 
 ### Step 1. Install dependencies
