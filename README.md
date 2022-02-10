@@ -12,7 +12,7 @@ npm run install
 
 ### Step 2. Compilation
 
-#### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development2
 
 ```
 npm run serve
@@ -25,4 +25,5 @@ npm run build
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
