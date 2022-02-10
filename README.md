@@ -12,7 +12,7 @@ npm run install
 
 ### Step 2. Compilation
 
-#### Compiles and hot-reloads for development2
+#### Compiles and hot-reloads for development
 
 ```
 npm run serve
